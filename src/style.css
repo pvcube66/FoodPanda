@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 .open-sans-{
@@ -106,4 +107,114 @@ align-items: center;
     font-weight: 500;
     
 
+=======
+
+
+.open-sans-{
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    font-family: "Open Sans";
+    /* overflow-x:hidden; */
+}
+
+.logo img{
+    height:32px;
+    width:164px;       
+    margin-right: 80px; 
+    padding-right: 90px;
+    margin-left: -53px;
+}
+.header{
+    width: 100%;
+    height:70px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.nav-items{
+    margin-right: -99px;
+}
+.nav-items ul{
+    display:flex;
+    color:black;
+    list-style: none;
+align-items: center;
+   /* padding-left: 70px; */
+}
+.nav-items ul li{
+    padding: 7px;
+    margin: 7px;
+    font-weight: 600;
+}
+#search-icon{
+    height:30px;
+    width:30px;
+    padding-left: 7px;
+}
+#location{
+    height:42px;
+    width:162px;
+    border-radius: 50px;
+    color:white;
+    background-color: #ff28b5;
+    border:1px solid transparent;
+}
+.card {
+    height: 300px;
+    width: 260px;
+    background: linear-gradient(145deg, #ffb6e5, #ff8ac6);
+    padding: 20px;
+    margin: 15px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card h3 {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-weight: 400;
+    color: #555;
+    line-height: 1.5;
+}
+
+
+.body{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px;
+    padding: 10px;
+    margin-left: 7%;
+    font-weight: 100;
+    overflow-x: hidden;
+}
+#item-images{
+    height: 168px;
+    width: 252px;
+    /* padding-left: 25px; */
+    border-radius: 12px;
+}
+.card h3{
+    font-weight: 500;
+    
+
+>>>>>>> f1d2586 (adding initial files)
 }
