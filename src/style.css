@@ -112,3 +112,12 @@ align-items: center;
     background:white;
     border: 1px solid transparent;
 }
+#loader {
+    height:500px;
+    width:500px;
+    position: absolute;
+    left: 30%;
+    /* top: 50%; */
+    right: 50%;
+    /* bottom: 0%; */
+}
