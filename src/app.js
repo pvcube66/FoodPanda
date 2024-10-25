@@ -3,7 +3,13 @@ import ReactDOM from 'react-dom/client'
 import logo from '../assets/logo.png'; // Go up one level to access assets
 import HeaderComponent from './Components/HeaderComponent'
 import Body from './Components/Body'
-import Footer from './Components/Footer'
+import Footer from './Components/Footer';
+import { createBrowserRouter,RouterProvider,Outlet } from 'react-router-dom';
+import About from './Components/About';
+import ContactUs from './Components/Contact';
+import ErrorPage from './Components/ErrorPage';
+import RestaurantMenu from './Components/RestaurantMenu';
+
 
 
 //header
@@ -30,12 +36,87 @@ const AppLayout=()=>{
     return(
         <>
         <HeaderComponent/>
-        <Body/>
-        
+        {/* <About/> */}
+        {/* <Body/> */}
+        {
+            //this is the outlet we have to fill diff pages.
+
+        }
+        <Outlet/>
         <Footer/>
+        {/* <ContactUs/> */}
         </>
     )
 }
+
+
+//creating routes
+
+const AppRouter=createBrowserRouter([
+    {
+        path:"/",
+        element:<AppLayout/>,
+        errorElement:<ErrorPage/>,
+        children:[
+
+            {
+                //ee children asala enti ante
+                //main first unde path / nindi okala /about ki velte em 
+
+            },
+            {
+
+                path:"/",
+                element:<Body/>,
+                errorElement:<ErrorPage/>
+        
+            },
+            {
+                path:"/about",
+                element:<About/>,
+                errorElement:<ErrorPage/>
+                //
+        
+            },
+            {
+                path:"/contact",
+                element:<ContactUs/>,
+                errorElement:<ErrorPage/>
+        
+            },
+            {
+                path:"/restaurant/:id",
+                element:<RestaurantMenu/>,
+                errorElement:<ErrorPage/>
+            }
+        ]
+    },
+    {
+        path:"/about",
+        element:<About/>,
+        errorElement:<ErrorPage/>
+
+    },
+    {
+        path:"/contact",
+        element:<ContactUs/>,
+        errorElement:<ErrorPage/>
+    },
+    {
+        path:"/footer",
+        element:<Footer/>,
+        errorElement:<ErrorPage/>
+    },
+    {
+        path:"/restaurant/id",
+        element:<RestaurantMenu/>,
+        errorElement:<ErrorPage/>
+    }
+
+
+])
+
+
 //header component:
 
 
@@ -48,7 +129,7 @@ const AppLayout=()=>{
 
 
 const root=ReactDOM.createRoot(document.getElementById("root"))
-root.render(<AppLayout/>)
+root.render(<RouterProvider router={AppRouter}/>)
 
 
 

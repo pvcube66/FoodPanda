@@ -121,3 +121,17 @@ align-items: center;
     right: 50%;
     /* bottom: 0%; */
 }
+#shimmer{
+    height: 300px; ;
+    width: 260;
+    background-color: gray;
+    padding: 20px;
+    margin: 15px;
+    /* border-radius: 20px; */
+}
+#shimset{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}

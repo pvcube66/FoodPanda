@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { restuarantList } from './config';
+import { Link } from 'react-router-dom';
+import About from './About';
 
 export function filterData(searchText,restuarantList){
     const Data=restaurants.filter((restaurant)=>{
@@ -51,9 +53,17 @@ const HeaderComponent=()=>{
                 
                 <div className='nav-items'>
                     <ul>
+                    <Link to="/">
                     <li>Home</li>
-                    <li>About</li>
+                    </Link>
+                    <Link to="/about">
+                    <li >About</li>
+                    </Link>
                     <li>Cart</li>
+                    <Link to="/contact">
+                    <li>Contact</li>
+                    </Link>
+
                     <li>Account</li>
                     <button
                     id="location">Choose Location</button>
