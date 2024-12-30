@@ -7,9 +7,10 @@ import Footer from './Components/Footer';
 import { createBrowserRouter,RouterProvider,Outlet } from 'react-router-dom';
 import About from './Components/About';
 import ContactUs from './Components/Contact';
+// import Profile from "./Components/Profile"
 import ErrorPage from './Components/ErrorPage';
 import RestaurantMenu from './Components/RestaurantMenu';
-
+import Profile from "./Components/ProfileClass"
 
 
 //header
@@ -72,10 +73,23 @@ const AppRouter=createBrowserRouter([
         
             },
             {
-                path:"/about",
-                element:<About/>,
-                errorElement:<ErrorPage/>
-                //
+                path:"about",
+                element:<Outlet/>,
+                errorElement:<ErrorPage/>,
+                children :[
+                    {
+                        path:"profile",
+                        element:<Profile/>,
+                        errorElement:<ErrorPage/>
+
+                    },
+                    {
+                        path:"",
+                        element:<About/>,
+                        errorElement:<ErrorPage/>
+
+                    }
+                ]
         
             },
             {
