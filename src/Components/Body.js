@@ -19,7 +19,7 @@ const Body = () => {
     getRestaurants()
   },)
  
-  console.log("pavuuuu");
+  // console.log("pavuuuu");
 
   //if restaurants is empty => shimmer ui
   // if restaurant has data => actual data ui
@@ -28,7 +28,7 @@ const Body = () => {
     const response = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.9324914&lng=83.42679729999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
     // console.log(response)
     const newData = await response.json();
-    console.log(newData);
+    // console.log(newData);
     const restaurantsData = newData?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
     const restaurantsData2=newData?.data?.cards[3]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     if (restaurantsData) {

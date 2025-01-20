@@ -11,6 +11,7 @@ import ContactUs from './Components/Contact';
 import ErrorPage from './Components/ErrorPage';
 import RestaurantMenu from './Components/RestaurantMenu';
 import Profile from "./Components/ProfileClass"
+import TryProfile from './Components/TryProfile';
 
 
 //header
@@ -125,8 +126,17 @@ const AppRouter=createBrowserRouter([
         path:"/restaurant/id",
         element:<RestaurantMenu/>,
         errorElement:<ErrorPage/>
+    },
+    {
+        path:"/profile",
+        element:<Profile/>,
+        errorElement:<ErrorPage/>
+    },
+    {
+        path:"/temp",
+        element:<TryProfile/>,
+        errorElement:<ErrorPage/>
     }
-
 
 ])
 
