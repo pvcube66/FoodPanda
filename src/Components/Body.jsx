@@ -49,7 +49,7 @@ const Body = () => {
 
       <div className='body'>
         {restaurants.map((restaurant) => (
-        <Link to={"restaurant/" + restaurant.info.id}>  <RestaurantCard props={restaurant} key={restaurant.info.id} />  </Link>
+        <Link to={"restaurant/" + restaurant.info.id}  key={restaurant.info.id}>  <RestaurantCard props={restaurant}  />  </Link>
         ))}
       </div> 
     </>

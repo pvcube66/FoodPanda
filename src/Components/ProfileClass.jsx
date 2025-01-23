@@ -1,5 +1,5 @@
 import React from "react";
-import Shimmer from "./Shimmer.js";
+import Shimmer from "./Shimmer.jsx";
 class Profile extends React.Component{
 
     constructor(props){

@@ -2,9 +2,14 @@ import { useEffect,useState } from "react";
 import { useParams } from "react-router-dom"
 import {img_cdn} from "./config"
 import Shimmer from "./Shimmer";
+import useRestaurantMenu from "../../utils/useRestaurantMenu";
+
 
 const RestaurantMenu = () => {
+
 const { id } = useParams();
+
+
 
 const [restaurant, setRestaurant] = useState(null)
 
@@ -23,6 +28,7 @@ async function getRestaurantInfo() {
         console.error("Error fetching restaurant data:", error);
     }
 }
+
 
 
 
