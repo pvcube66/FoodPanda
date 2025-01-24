@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{lazy,Suspense} from 'react';
 import ReactDOM from 'react-dom/client'
 import logo from '../assets/logo.png'; // Go up one level to access assets
 import HeaderComponent from './Components/HeaderComponent'
@@ -12,7 +12,9 @@ import ErrorPage from './Components/ErrorPage';
 import RestaurantMenu from './Components/RestaurantMenu';
 import Profile from "./Components/ProfileClass"
 import TryProfile from './Components/TryProfile';
+import Shimmer from './Components/Shimmer';
 
+// import Grocery from './Components/Grocery';
 
 //header
             // --logo 
@@ -33,6 +35,9 @@ import TryProfile from './Components/TryProfile';
 
 
 //app layout
+
+//for lazy loading..
+const Grocery =lazy(()=> import("./Components/Grocery"));
 
 const AppLayout=()=>{
     return(
@@ -100,10 +105,16 @@ const AppRouter=createBrowserRouter([
         
             },
             {
+                path:"/grocery",
+                element:<Suspense fallback={<Shimmer/>}><Grocery/></Suspense>,
+                errorElement:<ErrorPage/>
+            },
+            {
                 path:"/restaurant/:id",
                 element:<RestaurantMenu/>,
                 errorElement:<ErrorPage/>
             }
+
         ]
     },
     {
@@ -120,6 +131,11 @@ const AppRouter=createBrowserRouter([
     {
         path:"/footer",
         element:<Footer/>,
+        errorElement:<ErrorPage/>
+    },
+    {
+        path:"/grocery",
+        element:<Suspense fallback={<Shimmer/>}><Grocery/></Suspense>,
         errorElement:<ErrorPage/>
     },
     {

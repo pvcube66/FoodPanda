@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { restuarantList } from './config';
 import { Link } from 'react-router-dom';
 import About from './About';
+// import useCheckConnection from "../utils/useCheckConnection";
 
 export function filterData(searchText,restuarantList){
     const Data=restaurants.filter((restaurant)=>{
@@ -53,6 +54,12 @@ const HeaderComponent=()=>{
                 
                 <div className='nav-items'>
                     <ul>
+                    {/* <Link to="/">
+                    <li>Online Status{}</li>
+                    </Link> */}
+                    <Link to="/grocery">
+                    <li>Grocery</li>
+                    </Link>
                     <Link to="/">
                     <li>Home</li>
                     </Link>
