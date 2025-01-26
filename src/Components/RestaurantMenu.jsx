@@ -11,24 +11,24 @@ const { id } = useParams();
 
 
 
-// const [restaurant, setRestaurant] = useState(null)
-const restaurant=useRestaurantMenu(id);
+const [restaurant, setRestaurant] = useState(null)
+// const restaurant=useRestaurantMenu(id);
 
-// useEffect(()=>{
-//     getRestaurantInfo();
+useEffect(()=>{
+    getRestaurantInfo();
     
-// },[])
+},[])
 
-// async function getRestaurantInfo() {
-//     try {
-//         const data = await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.37240&lng=78.43780&restaurantId=${id}&catalog_qa=undefined&submitAction=ENTER`);
-//         const json = await data.json();
-//         console.log(json+"hello");
-//         setRestaurant(json.data.cards[2].card.card.info);
-//     } catch (error) {
-//         console.error("Error fetching restaurant data:", error);
-//     }
-// }
+async function getRestaurantInfo() {
+    try {
+        const data = await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.37240&lng=78.43780&restaurantId=${id}&catalog_qa=undefined&submitAction=ENTER`);
+        const json = await data.json();
+        console.log(json+"hello");
+        setRestaurant(json.data.cards[2].card.card.info);
+    } catch (error) {
+        console.error("Error fetching restaurant data:", error);
+    }
+}
 
 
 
