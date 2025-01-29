@@ -5,6 +5,8 @@ import Shimmer from './Shimmer';
 import { Link } from 'react-router-dom';
 // import { getFilteredData } from './HeaderComponent';
 
+import { withOpenLabel } from './RestaurantCard';
+
 export function filterData(searchText, restaurants) {
   return restaurants.filter((restaurant) =>
     restaurant.info.name.toLowerCase().includes(searchText.toLowerCase())
@@ -14,6 +16,8 @@ export function filterData(searchText, restaurants) {
 const Body = () => {
   // const [searchText, setSearchText] = useState("");
   const [restaurants, setRestaurants] = useState([]);
+
+  const RestaurantCardOpened=withOpenLabel(RestaurantCard);
 
   useEffect(()=>{
     getRestaurants()
@@ -34,9 +38,11 @@ const Body = () => {
     if (restaurantsData) {
       // const limitedRestaurants = restaurantsData.slice(0, 8);
       setRestaurants(restaurantsData);
+      console.log(restaurantsData)
     }
     else if(restaurantsData2){
       setRestaurants(restaurantsData2);
+      console.log(restaurantsData2)
 
     } 
     else {
@@ -49,7 +55,12 @@ const Body = () => {
 
       <div className='body'>
         {restaurants.map((restaurant) => (
-        <Link to={"restaurant/" + restaurant.info.id}  key={restaurant.info.id}>  <RestaurantCard props={restaurant}  />  </Link>
+        <Link to={"restaurant/" + restaurant.info.id}  key={restaurant.info.id}> 
+      {
+          (restaurant?.info?.isOpen==true)?<RestaurantCardOpened props={restaurant}/>: <RestaurantCard props={restaurant}  /> 
+      }
+        
+          </Link>
         ))}
       </div> 
     </>

@@ -135,3 +135,17 @@ align-items: center;
     justify-content: center;
     
 }
+
+#open-tag{
+    position:absolute;
+    left: 270x;
+    z-index: 1;
+    border:2px solid black;
+    color:whitesmoke;
+    background: black;
+    border-radius: 5px;
+    height:20px;
+    width:50px;
+    padding:4px;
+    margin:4px;
+}
