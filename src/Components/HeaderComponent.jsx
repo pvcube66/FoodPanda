@@ -1,7 +1,8 @@
-import { useState } from 'react';
+import { useState,useContext} from 'react';
 import { restuarantList } from './config';
 import { Link } from 'react-router-dom';
 import About from './About';
+import UserContext from '../../utils/UserContext';
 // import useCheckConnection from "../utils/useCheckConnection";
 
 export function filterData(searchText,restuarantList){
@@ -47,6 +48,9 @@ const HeaderComponent=()=>{
     const [searchText,setSearchText]=useState();
     const [restaurants,setRestaurants]=useState();
     const [logger,setLogger]=useState(true);
+
+    const  {loggedInUser} = useContext(UserContext);
+    console.log(loggedInUser)
 
         return(
             <div className='header'>
@@ -96,6 +100,8 @@ const HeaderComponent=()=>{
                         <img id='search-icon' src="https://www.freeiconspng.com/uploads/search-icon-png-5.png" alt="search" />
                     </button>
                    { (logger) ? <button onClick={() => setLogger(false)}>Logout</button> : <button onClick={() => setLogger(true)}>Login</button> }
+                   {/* <li>{loggedInUser}</li> */}
+
                     
     
                     </ul>
