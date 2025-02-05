@@ -167,7 +167,7 @@ align-items: center;
     padding: 10px;
     /* border:4px solid black
      */
-     width: 100%;
+     width: 1100px;
      border-bottom:4px solid gray;
      height: 150px;
 }
@@ -206,4 +206,30 @@ align-items: center;
     left: 66%;
     
     
+}
+
+#cart-page h1{
+    margin:10px;
+    padding:3px;
+    margin-left: 50px;
+    text-align: center;
+}
+ li{
+    list-style: none;
+}
+#cart-items{
+    height:6%;
+    width:50%;
+    margin-left: 25%;
+    margin-top: 20px;
+    /* border:2px solid gray; */
+    /* border-bottom: 8px solid gray; */
+}
+#clear-cart{
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    height:40px;
+    width:100px;
+    margin-left: 48%;
 }

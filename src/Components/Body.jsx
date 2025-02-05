@@ -23,7 +23,7 @@ const Body = () => {
     getRestaurants()
   },)
  
-  // console.log("pavuuuu");
+ 
 
   //if restaurants is empty => shimmer ui
   // if restaurant has data => actual data ui
@@ -38,11 +38,11 @@ const Body = () => {
     if (restaurantsData) {
       // const limitedRestaurants = restaurantsData.slice(0, 8);
       setRestaurants(restaurantsData);
-      console.log(restaurantsData)
+      // console.log(restaurantsData)
     }
     else if(restaurantsData2){
       setRestaurants(restaurantsData2);
-      console.log(restaurantsData2)
+      // console.log(restaurantsData2)
 
     } 
     else {

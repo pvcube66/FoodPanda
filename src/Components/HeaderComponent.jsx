@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import About from './About';
 import UserContext from '../../utils/UserContext';
 // import useCheckConnection from "../utils/useCheckConnection";
+import { useSelector } from 'react-redux';
 
 export function filterData(searchText,restuarantList){
     const Data=restaurants.filter((restaurant)=>{
@@ -50,7 +51,14 @@ const HeaderComponent=()=>{
     const [logger,setLogger]=useState(true);
 
     const  {loggedInUser} = useContext(UserContext);
-    console.log(loggedInUser)
+    // console.log(loggedInUser)
+
+    const cartItems = useSelector((store) => {
+        console.log("Store:", store); // Debug: Log the entire store
+        return store.cart.items; // Access the `items` array from the `cart` slice
+    });
+
+    // console.log(cartItems)
 
         return(
             <div className='header'>
@@ -70,7 +78,7 @@ const HeaderComponent=()=>{
                     <Link to="/about">
                     <li >About</li>
                     </Link>
-                    <li>Cart</li>
+                    <Link to="/cart"><li>Cart({cartItems ? cartItems.length : 0})</li></Link>
                     <Link to="/contact">
                     <li>Contact</li>
                     </Link>
