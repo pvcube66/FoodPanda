@@ -1,0 +1,95 @@
+
+  {  "info": {
+        "id": "563217",
+        "name": "TFC - Tasty Food Court",
+        "cloudinaryImageId": "ewuu6nwsfqgecyafgbzi",
+        "locality": "Chittivalasa Village",
+        "areaName": "Thagarapuvalasa",
+        "costForTwo": "₹220 for two",
+        "cuisines": [
+            "Fast Food",
+            "Snacks",
+            "Pizzas",
+            "Chinese",
+            "Beverages"
+        ],
+        "avgRating": 3.5,
+        "parentId": "203787",
+        "avgRatingString": "3.5",
+        "totalRatingsString": "807",
+        "sla": {
+            "deliveryTime": 27,
+            "lastMileTravel": 0.5,
+            "serviceability": "SERVICEABLE",
+            "slaString": "25-30 mins",
+            "lastMileTravelString": "0.5 km",
+            "iconType": "ICON_TYPE_EMPTY"
+        },
+        "availability": {
+            "nextCloseTime": "2025-02-07 22:30:00",
+            "opened": true
+        },
+        "badges": {
+            "imageBadges": [
+                {
+                    "imageId": "v1690360529/Ratnesh_Badges/Only_on_swiggy_badge_4x.png",
+                    "description": "OnlyOnSwiggy"
+                }
+            ]
+        },
+        "isOpen": true,
+        "type": "F",
+        "badgesV2": {
+            "entityBadges": {
+                "imageBased": {
+                    "badgeObject": [
+                        {
+                            "attributes": {
+                                "description": "OnlyOnSwiggy",
+                                "imageId": "v1690360529/Ratnesh_Badges/Only_on_swiggy_badge_4x.png"
+                            }
+                        }
+                    ]
+                },
+                "textBased": {},
+                "textExtendedBadges": {}
+            }
+        },
+        "aggregatedDiscountInfoV3": {
+            "header": "10% OFF",
+            "subHeader": "UPTO ₹100"
+        },
+        "orderabilityCommunication": {
+            "title": {},
+            "subTitle": {},
+            "message": {},
+            "customIcon": {}
+        },
+        "differentiatedUi": {
+            "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+            "differentiatedUiMediaDetails": {
+                "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                "lottie": {},
+                "video": {}
+            }
+        },
+        "reviewsSummary": {},
+        "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+        "restaurantOfferPresentationInfo": {},
+        "externalRatings": {
+            "aggregatedRating": {
+                "rating": "--"
+            }
+        },
+        "ratingsDisplayPreference": "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY"
+    },
+    "analytics": {
+        "context": "seo-data-5a88b5ac-db80-41d1-8aa3-d4bb048d736c"
+    },
+    "cta": {
+        "link": "https://www.swiggy.com/city/vizag/tfc-tasty-food-court-chittivalasa-village-thagarapuvalasa-rest563217",
+        "text": "RESTAURANT_MENU",
+        "type": "WEBLINK"
+    },
+    "widgetId": "collectionV5RestaurantListWidget_SimRestoRelevance_food_seo"
+  }

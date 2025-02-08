@@ -1,0 +1,8 @@
+{
+    "info": {
+        "name": "Panda Express",
+        "avgRating": 4.5,
+        "cuisines": ["Chinese", "Asian", "Fast Food"],
+        "cloudinaryImageId": "sample-image-id"
+    }
+}

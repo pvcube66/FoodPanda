@@ -3,18 +3,18 @@ import { img_cdn } from './config';
 
 
 export const RestaurantCard = ({ props }) => {
-    const { name, avgRating, cuisines, cloudinaryImageId } = props?.info;
+    const { name, avgRating, cuisines, cloudinaryImageId } = props?.info || {};
     // console.log(name, avgRating, cuisines, cloudinaryImageId);
-  
+  console.log(props);
     return (
       <div className='card'>
         <img id="item-images" src={img_cdn+cloudinaryImageId} alt="restimg" />
         <h3>{name}</h3>
         <h3>{avgRating + " Stars"}</h3>
         <h3>
-          {cuisines.length > 3
+          {cuisines && cuisines.length > 3
             ? cuisines.slice(0, 3).join(', ') + '...'
-            : cuisines.join(', ')}
+            :cuisines? cuisines.join(', '): ""}
         </h3>
       </div>
     );
@@ -27,6 +27,7 @@ export const RestaurantCard = ({ props }) => {
 
 
     return(props)=>{
+
 
       //think this return as a component. what will a component return?
       //jsx bitch and below is the jsx its returning
